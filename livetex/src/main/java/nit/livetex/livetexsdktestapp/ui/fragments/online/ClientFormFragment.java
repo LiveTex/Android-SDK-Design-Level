@@ -91,6 +91,7 @@ public class ClientFormFragment extends BaseFragment implements ClientFormCallba
             LTDepartment department = (LTDepartment) spDepartments.getSelectedItem();
             presenter.sendToDepartmentOperator(department, welcomeName, livetexId, etMessage.getText().toString());
         }
+
     }
 
     @Override

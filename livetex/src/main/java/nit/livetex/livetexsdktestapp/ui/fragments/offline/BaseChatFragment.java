@@ -76,6 +76,7 @@ public abstract class BaseChatFragment extends BaseFragment implements View.OnCl
     private void init(View v) {
         lvChat = (ListView) v.findViewById(android.R.id.list);
         ivSendMsg = (ImageView) v.findViewById(R.id.ivSendMsg);
+        ivSendMsg.setColorFilter(getResources().getColor(R.color.new_blue));
         etInputMsg = (EditText) v.findViewById(R.id.etInputMsg);
         ivVoteUp = (ImageView) v.findViewById(R.id.ivVoteUp);
         ivVoteDown = (ImageView) v.findViewById(R.id.ivVoteDown);

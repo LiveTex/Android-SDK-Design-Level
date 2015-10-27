@@ -73,7 +73,7 @@ public class SendOfflineMessageFragment extends BaseFragment implements SendOffl
 
     @Override
     public void onClick(View view) {
-        if(view.getId() == R.id.btnSendOfflineMsg) {
+
             String phone = "";
             String name = "";
                 /*if(!CommonUtils.isEmpty(etPhone)) {
@@ -92,7 +92,7 @@ public class SendOfflineMessageFragment extends BaseFragment implements SendOffl
             } else {
                 CommonUtils.showToast(getActivity(), "Заполните обязательные поля");
             }
-        }
+
     }
 
     @Override

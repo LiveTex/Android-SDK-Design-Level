@@ -114,14 +114,14 @@ public class OnlineChatFragment extends BaseChatFragment {
                 break;
             case CLOSE:
                 Log.d("close", "onMessageReceive");
-                sendingMessagesEnabled(false);
+                //sendingMessagesEnabled(false);
                 tvHeaderTyping.setText("оператор оффлайн");
                 Dao.getInstance(getContext()).saveMessage("CLOSE_DIALOG",
                         String.valueOf(System.currentTimeMillis()), Integer.parseInt(getConversationId()), false);
                 getFragmentEnvironment().getSupportLoaderManager().getLoader(getLoaderId()).forceLoad();
                 break;
             case TYPING_MESSAGE:
-               // tvHeaderTyping.setVisibility(View.VISIBLE);
+                tvHeaderTyping.setVisibility(View.VISIBLE);
                 tvHeaderTyping.setText("печатает...");
                 handler.postDelayed(typingTask, 1500);
                 break;
@@ -248,6 +248,7 @@ public class OnlineChatFragment extends BaseChatFragment {
     @Override
     public void onClick(View view) {
         super.onClick(view);
+
         if(view.getId() == R.id.ivVoteUp) {
             MainApplication.vote(true, new AHandler() {
                 @Override
@@ -260,7 +261,7 @@ public class OnlineChatFragment extends BaseChatFragment {
                     CommonUtils.showToast(getContext(), "Спасибо за оценку");
                 }
             });
-        } else if(R.id.ivVoteDown == view.getId()) {
+        } else if(view.getId() == R.id.ivVoteDown) {
             MainApplication.vote(false, new AHandler() {
                 @Override
                 public void onError(String errMsg) {

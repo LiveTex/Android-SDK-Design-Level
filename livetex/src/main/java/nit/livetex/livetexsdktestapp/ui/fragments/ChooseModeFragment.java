@@ -37,7 +37,7 @@ public class ChooseModeFragment extends BaseFragment implements View.OnClickList
     public void onClick(View view) {
         if(view.getId() == R.id.btnOfflineMode) {
             showFragment(new OfflineConversationListFragment(), true);
-        } else {
+        } else if(view.getId() == R.id.btnOnlineMode) {
             showFragment(new ClientFormFragment(), true);
         }
     }
