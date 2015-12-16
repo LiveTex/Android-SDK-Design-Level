@@ -42,8 +42,9 @@ public class FragmentEnvironment extends ActionBarActivity {
         }
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
         if(Build.VERSION.SDK_INT >= 21) {
-            getWindow().setStatusBarColor(getResources().getColor(R.color.material_blue_900));
+            getWindow().setStatusBarColor(DataKeeper.getMainColor(this));
         }
         setContentView(R.layout.activity_main);
         init();

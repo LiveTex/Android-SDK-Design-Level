@@ -27,6 +27,7 @@ import nit.livetex.livetexsdktestapp.ui.dialogs.AttachChooseDialog;
 import nit.livetex.livetexsdktestapp.ui.dialogs.FileManagerDialog;
 import nit.livetex.livetexsdktestapp.ui.fragments.BaseFragment;
 import nit.livetex.livetexsdktestapp.utils.CommonUtils;
+import nit.livetex.livetexsdktestapp.utils.DataKeeper;
 
 /**
  * Created by user on 28.07.15.
@@ -76,7 +77,7 @@ public abstract class BaseChatFragment extends BaseFragment implements View.OnCl
     private void init(View v) {
         lvChat = (ListView) v.findViewById(android.R.id.list);
         ivSendMsg = (ImageView) v.findViewById(R.id.ivSendMsg);
-        ivSendMsg.setColorFilter(getResources().getColor(R.color.new_blue));
+        ivSendMsg.setColorFilter(DataKeeper.getMainColor(getContext()));
         etInputMsg = (EditText) v.findViewById(R.id.etInputMsg);
         ivVoteUp = (ImageView) v.findViewById(R.id.ivVoteUp);
         ivVoteDown = (ImageView) v.findViewById(R.id.ivVoteDown);

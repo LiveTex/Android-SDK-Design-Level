@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import nit.livetex.livetexsdktestapp.R;
+import nit.livetex.livetexsdktestapp.utils.DataKeeper;
 
 /**
  * Created by user on 13.09.15.
@@ -35,7 +36,7 @@ public class CustomEditText extends EditText {
             @Override
             public void onFocusChange(View view, boolean b) {
                 if(b){
-                    getBackground().setColorFilter(getResources().getColor(R.color.new_blue), PorterDuff.Mode.SRC_ATOP);
+                    getBackground().setColorFilter(DataKeeper.getMainColor(getContext()), PorterDuff.Mode.SRC_ATOP);
                 } else {
                     getBackground().setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP);
                 }

@@ -22,6 +22,7 @@ import nit.livetex.livetexsdktestapp.utils.CommonUtils;
 import java.util.ArrayList;
 import java.util.List;
 
+import nit.livetex.livetexsdktestapp.utils.DataKeeper;
 import nit.livetex.livetexsdktestapp.view.CustomEditText;
 import sdk.models.LTDepartment;
 import sdk.models.LTEmployee;
@@ -65,6 +66,7 @@ public class ClientFormFragment extends BaseFragment implements ClientFormCallba
     //    etLivetexId = (CustomEditText) v.findViewById(R.id.etLivetexId);
         etMessage = (CustomEditText) v.findViewById(R.id.etMessage);
         btnCreateOnlineDialog = (Button) v.findViewById(R.id.btnCreateOnlineDialog);
+        btnCreateOnlineDialog.setBackgroundColor(DataKeeper.getMainColor(getContext()));
         btnCreateOnlineDialog.setOnClickListener(this);
     }
 

@@ -3,6 +3,7 @@ package nit.livetex.livetexsdktestapp.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import nit.livetex.livetexsdktestapp.R;
 import sdk.LogUtil;
 
 /**
@@ -72,5 +73,13 @@ public class DataKeeper {
 
     public static String restoreRegId(Context context) {
         return context.getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE).getString(REG_ID, "");
+    }
+
+    public static int getMainColor(Context context) {
+        return context.getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE).getInt("color", R.color.new_blue);
+    }
+
+    public static void setMainColor(Context context, int color) {
+        context.getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE).edit().putInt("color", color).apply();
     }
 }

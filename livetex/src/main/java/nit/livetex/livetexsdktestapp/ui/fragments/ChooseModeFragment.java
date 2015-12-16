@@ -10,6 +10,7 @@ import nit.livetex.livetexsdktestapp.ui.fragments.online.ClientFormFragment;
 
 import java.util.ArrayList;
 
+import nit.livetex.livetexsdktestapp.utils.DataKeeper;
 import sdk.handler.AHandler;
 import sdk.models.LTDepartment;
 
@@ -28,6 +29,7 @@ public class ChooseModeFragment extends BaseFragment implements View.OnClickList
 
     private void init(View v) {
         btnOfflineMode = (Button) v.findViewById(R.id.btnOfflineMode);
+        btnOfflineMode.setBackgroundColor(DataKeeper.getMainColor(getContext()));
         btnOnlineMode = (Button) v.findViewById(R.id.btnOnlineMode);
         btnOnlineMode.setOnClickListener(this);
         btnOfflineMode.setOnClickListener(this);
@@ -46,7 +48,7 @@ public class ChooseModeFragment extends BaseFragment implements View.OnClickList
     protected View onCreateView(View v) {
         init(v);
         btnOnlineMode.setBackground(getContext().getResources().getDrawable(R.drawable.gray_btn));
-
+        btnOnlineMode.setBackgroundColor(DataKeeper.getMainColor(getContext()));
         MainApplication.getDepartments("online", new AHandler<ArrayList<LTDepartment>>() {
             @Override
             public void onError(String errMsg) {
@@ -59,6 +61,7 @@ public class ChooseModeFragment extends BaseFragment implements View.OnClickList
                 if(departments != null && departments.size() != 0) {
                     btnOnlineMode.setEnabled(true);
                     btnOnlineMode.setBackground(getContext().getResources().getDrawable(R.drawable.blue_btn));
+                    btnOnlineMode.setBackgroundColor(DataKeeper.getMainColor(getContext()));
                 }
             }
         });

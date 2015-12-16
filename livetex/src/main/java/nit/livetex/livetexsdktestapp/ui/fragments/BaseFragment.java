@@ -2,6 +2,7 @@ package nit.livetex.livetexsdktestapp.ui.fragments;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
@@ -15,6 +16,7 @@ import android.view.WindowManager;
 import nit.livetex.livetexsdktestapp.FragmentEnvironment;
 import nit.livetex.livetexsdktestapp.R;
 import nit.livetex.livetexsdktestapp.utils.BusProvider;
+import nit.livetex.livetexsdktestapp.utils.DataKeeper;
 
 /**
  * Created by user on 28.07.15.
@@ -162,6 +164,7 @@ public abstract class BaseFragment extends Fragment {
 
         LayoutInflater inflater = LayoutInflater.from(getContext());
         getFragmentEnvironment().getSupportActionBar().setCustomView(getCustomActionBarView(inflater, actionBarHeight));
+        getFragmentEnvironment().getSupportActionBar().setBackgroundDrawable(new ColorDrawable(DataKeeper.getMainColor(getContext())));
     }
 
     public View getCustomActionBarView(LayoutInflater inflater, int actionBarHeight){

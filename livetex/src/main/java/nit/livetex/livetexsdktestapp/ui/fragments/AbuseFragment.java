@@ -11,6 +11,7 @@ import nit.livetex.livetexsdktestapp.MainApplication;
 import nit.livetex.livetexsdktestapp.R;
 import nit.livetex.livetexsdktestapp.ui.fragments.offline.SendOfflineMessageFragment;
 import nit.livetex.livetexsdktestapp.utils.CommonUtils;
+import nit.livetex.livetexsdktestapp.utils.DataKeeper;
 import nit.livetex.livetexsdktestapp.view.CustomEditText;
 
 
@@ -71,6 +72,7 @@ public class AbuseFragment extends BaseFragment implements View.OnClickListener 
         etAbusePhone = (CustomEditText) v.findViewById(R.id.etAbusePhone);
         etEmail = (CustomEditText) v.findViewById(R.id.etEmail);
         btnSendAbuse = (Button) v.findViewById(R.id.btnSendAbuse);
+        btnSendAbuse.setBackgroundColor(DataKeeper.getMainColor(getContext()));
         btnSendAbuse.setOnClickListener(this);
     }
 

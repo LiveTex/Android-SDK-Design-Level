@@ -15,6 +15,7 @@ import nit.livetex.livetexsdktestapp.providers.ConversationsProvider;
 import nit.livetex.livetexsdktestapp.ui.callbacks.SendOfflineMessageCallback;
 import nit.livetex.livetexsdktestapp.ui.fragments.BaseFragment;
 import nit.livetex.livetexsdktestapp.utils.CommonUtils;
+import nit.livetex.livetexsdktestapp.utils.DataKeeper;
 import nit.livetex.livetexsdktestapp.view.CustomEditText;
 
 /**
@@ -56,6 +57,7 @@ public class SendOfflineMessageFragment extends BaseFragment implements SendOffl
         etEmail = (CustomEditText) v.findViewById(R.id.etEmail);
         etMessage = (CustomEditText) v.findViewById(R.id.etMessage);
         btnSendOfflineMsg = (Button) v.findViewById(R.id.btnSendOfflineMsg);
+        btnSendOfflineMsg.setBackgroundColor(DataKeeper.getMainColor(getContext()));
         btnSendOfflineMsg.setOnClickListener(this);
     }
 

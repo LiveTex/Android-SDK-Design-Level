@@ -35,4 +35,5 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(':livetex')
     compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.larswerkman:lobsterpicker:1.0.0'
 }

@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import nit.livetex.livetexsdktestapp.R;
 import nit.livetex.livetexsdktestapp.models.MessagePersistent;
+import nit.livetex.livetexsdktestapp.utils.DataKeeper;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -96,7 +97,7 @@ public class ChatAdapter extends CursorAdapter {
         LinearLayout llLeft = (LinearLayout) view.findViewById(R.id.llLeft);
         LinearLayout llRight = (LinearLayout) view.findViewById(R.id.llRight);
         LinearLayout llRightBaloon = (LinearLayout) view.findViewById(R.id.llRightBaloon);
-        llRightBaloon.getBackground().setColorFilter(context.getResources().getColor(R.color.new_blue), PorterDuff.Mode.SRC_ATOP);
+        llRightBaloon.getBackground().setColorFilter(DataKeeper.getMainColor(context), PorterDuff.Mode.SRC_ATOP);
         TextView tvDialogState = (TextView) view.findViewById(R.id.tvDialogState);
         TextView tvMessageLeft = (TextView) view.findViewById(R.id.tvLeft);
         tvMessageLeft.getBackground().setColorFilter(context.getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
