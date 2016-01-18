@@ -28,3 +28,5 @@
 			в тег application   tools:replace="android:icon"
 			
 4. В settings.gradle добавить ':livetex'
+
+5. При инициализации в метод DataKeeper.setMainColor можно передать цвет темы с которой будет отображаться чат
