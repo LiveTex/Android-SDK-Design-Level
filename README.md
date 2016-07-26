@@ -30,3 +30,4 @@
 4. В settings.gradle добавить ':livetex'
 
 5. При инициализации в метод DataKeeper.setMainColor можно передать цвет темы с которой будет отображаться чат
+6. Чтобы быстро поменять цвет основной темы приложения реализован метод DataKeeper.setMainColor(Context context, int color); 
